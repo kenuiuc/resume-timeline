@@ -1,6 +1,6 @@
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
-\LoadClass[a4paper]{article}
+\LoadClass[letterpaper, 11pt]{article}
 
 \newif\if@showLinks   \@showLinksfalse
 
@@ -42,7 +42,7 @@
 \RequirePackage{url,parskip} % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
-\RequirePackage[margin=1.5cm]{geometry}
+\RequirePackage[margin=1.0cm]{geometry}
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
@@ -269,7 +269,9 @@
                 & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} \\
 }
 
-\newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
+\newcommand\emptySeparator{
+    & \\
+}
 
 % \degree
 % {location} {degree name}
