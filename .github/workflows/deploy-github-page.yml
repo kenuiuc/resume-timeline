@@ -31,7 +31,7 @@ jobs:
             --name latexmk-container \
             -v "${PWD}:/workdir" \
             -w "/workdir" \
-            kenuiuc/ubuntu-latexmk \
+            texlive/texlive \
             lualatex \
             -interaction nonstopmode \
             --output-directory=docs \
