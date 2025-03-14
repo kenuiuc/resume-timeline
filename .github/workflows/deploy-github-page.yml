@@ -35,7 +35,8 @@ jobs:
             lualatex \
             -interaction nonstopmode \
             --output-directory=docs \
-            ken_wang_resume.tex
+            ken_wang_resume.tex \
+            || true
       - name: upload-artifact
         uses: actions/upload-pages-artifact@v3
         with:
