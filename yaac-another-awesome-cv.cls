@@ -42,8 +42,10 @@
 \RequirePackage{url,parskip} % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
+
 % page margin
-\RequirePackage[left=5mm,top=10mm,right=5mm,bottom=10mm]{geometry}
+\RequirePackage[left=5mm,top=5mm,right=5mm,bottom=5mm]{geometry}
+
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
