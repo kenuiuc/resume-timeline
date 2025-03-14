@@ -42,7 +42,8 @@
 \RequirePackage{url,parskip} % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
-\RequirePackage[margin=1.0cm]{geometry}
+% page margin
+\RequirePackage[left=5mm,top=10mm,right=5mm,bottom=10mm]{geometry}
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
@@ -106,7 +107,7 @@
 %\font\fb=''[cmr10]''                      % for use with \LaTeX command
 
 % Setup CV sections
-\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\bfseries\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{2pt}{2pt}
 
 % Configure list
@@ -140,10 +141,10 @@
 
 %New length definition
 \newlength{\rightcolumnlength}
-\setlength{\rightcolumnlength}{14.8cm}
+\setlength{\rightcolumnlength}{16cm}
 
 \newlength{\leftcolumn}
-\setlength{\leftcolumn}{2.5cm}
+\setlength{\leftcolumn}{4.0cm}
 
 % Font Awesome icons aliases
 \newcommand{\mailSymbol}{\faAt}
@@ -165,8 +166,10 @@
 
 % Render author's name
 % Usage: \user{<firstanme>}{<lastname>}
-\newcommand\user[2]{\color{accentcolor}
-{\LARGE #1 \LARGE #2 \color{Black}}}
+\newcommand\user[2]{
+    \color{accentcolor}
+    {\textbf{\huge {#1 #2}} \color{Black}}
+}
 
 % Render a text with its symbol
 % Usage; \socialtext{<icon>}{<label>}
@@ -214,7 +217,8 @@
     }{
       \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
     }
-    \color{accentcolor}\user{\@firstname}{\@lastname}\color{black}\\
+    \color{accentcolor}
+    \user{\@firstname}{\@lastname}\color{black}\\
     \small{\@socialinfo}
     \end{minipage}
     \ifdef{\@photodiameter}{
@@ -222,16 +226,16 @@
         \idphoto
       \end{minipage}
     }{}
-    \resumetitle{\@tagline}
+    % \resumetitle{\@tagline}
   }{
     \ifundef{\@photodiameter}{
       \begin{minipage}{\linewidth}
     }{
       \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
     }
-    \user{\@firstname}{\@lastname}\\
-    \resumetitle{\@tagline}
-    \smallskip\\
+    \user{\@firstname}{\@lastname}
+    % \resumetitle{\@tagline}
+    \vspace{5pt}\\
     \small{\@socialinfo}
     \end{minipage}
     \ifdef{\@photodiameter}{
@@ -239,7 +243,6 @@
         \idphoto
       \end{minipage}
     }{}
-    \smallskip
   }
 }
 
@@ -263,8 +266,8 @@
 % }
 % {<Technology list>}
 \newcommand\experience[7]{
-    \textbf{#1} & \textbf{#3} \\*
-    \text{#2}   & \text{#4} \\*
+    \textbf{\Large {#1}} & \textbf{\Large {#3}} \\*
+    \text{\large #2}   & \text{\large #4} \\*
                 & \begin{minipage}[t]{\rightcolumnlength} #5 \end{minipage} \\*
                 & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} \\
 }
@@ -277,8 +280,8 @@
 % {location} {degree name}
 %            {school name}
 \newcommand\degree[3]{
-    \text{#1} & \textbf{#2} \\*
-              & \text{#3} \\*
+    \text{\large#1} & \textbf{\Large{#2}} \\*
+              & \text{\large #3} \\*
 }
 
 \newcommand*\twocolumnsection[2]{
