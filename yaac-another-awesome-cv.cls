@@ -268,7 +268,7 @@
 % }
 % {<Technology list>}
 \newcommand\experience[7]{
-    \textbf{\Large {#1}} & \textbf{\Large {#3}} \\*
+    \textbf{\large {#1}} & \textbf{\large {#3}} \\*
     \text{\large #2}   & \text{\large #4} \\*
                 & \begin{minipage}[t]{\rightcolumnlength} #5 \end{minipage} \\*
                 & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} \\
@@ -282,8 +282,8 @@
 % {location} {degree name}
 %            {school name}
 \newcommand\degree[3]{
-    \text{\large#1} & \textbf{\Large{#2}} \\*
-              & \text{\large #3} \\*
+    \text{\large#1} & \textbf{\large{#2}} \\*
+                    & \text{\large #3} \\*
 }
 
 \newcommand*\twocolumnsection[2]{
