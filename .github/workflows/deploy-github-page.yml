@@ -32,11 +32,11 @@ jobs:
             -v "${PWD}:/workdir" \
             -w "/workdir" \
             texlive/texlive \
-            lualatex \
-            -interaction nonstopmode \
-            --output-directory=docs \
-            ken_wang_resume.tex \
-            || true
+            latexmk \
+            -pdf ken_wang_resume.tex \
+            -pdflatex=lualatex \
+            -outdir=docs \
+            -auxdir=/tmp/latexmk
       - name: upload-artifact
         uses: actions/upload-pages-artifact@v3
         with:
