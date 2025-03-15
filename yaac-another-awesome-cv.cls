@@ -35,6 +35,9 @@
 
 \ProcessOptions
 
+% Fix error
+\usepackage{amsmath}
+
 % Dependences
 \RequirePackage[english]{babel}
 \RequirePackage[utf8]{luainputenc}
