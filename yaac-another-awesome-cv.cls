@@ -1,6 +1,6 @@
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
-\LoadClass[letterpaper, 11pt]{article}
+\LoadClass[letterpaper, 16pt]{article}
 
 \newif\if@showLinks   \@showLinksfalse
 
@@ -23,10 +23,6 @@
   \def\@monochrome{monochrome}
 }
 
-\DeclareOption{localFont}{
-  \def\@local{local}
-}
-
 \DeclareOption{alternative}{
   \def\@alternative{alternate}
 }
@@ -37,6 +33,7 @@
 
 % Fix error
 \usepackage{amsmath}
+\usepackage{ctex}
 
 % Dependences
 \RequirePackage[english]{babel}
@@ -47,7 +44,7 @@
 \RequirePackage{fullpage}
 
 % page margin
-\RequirePackage[left=5mm,top=5mm,right=5mm,bottom=5mm]{geometry}
+\RequirePackage[left=5mm,top=2.5mm,right=5mm,bottom=2.5mm]{geometry}
 
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
@@ -113,7 +110,7 @@
 
 % Setup CV sections
 \titleformat{\section}{\Large\bfseries\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{2pt}{2pt}
+\titlespacing{\section}{0pt}{0.5pt}{0.5pt}
 
 % Configure list
 \setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
@@ -126,23 +123,11 @@
 \hyphenation{im-pre-se}
 
 % Setup fonts
-\defaultfontfeatures{Mapping=tex-text}
-%
-
-% Define font to use according to localFont option
-\ifundef{\@local}
-{
-  %\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
-  \setmainfont{Source Sans Pro Light}[
-    BoldFont = SourceSansPro-Regular, 
-    ItalicFont= Source Sans Pro Light Italic]
-}
-{
-  \setmainfont{SourceSansPro-Light}[
-    Path = fonts/, 
-    BoldFont = SourceSansPro-Regular, 
-    ItalicFont = SourceSansPro-LightIt]
-}
+ \defaultfontfeatures{Mapping=tex-text}
+ \setmainfont{Source Sans Pro Light}[
+     BoldFont = SourceSansPro-Regular, 
+     ItalicFont= Source Sans Pro Light Italic
+]
 
 %New length definition
 \newlength{\rightcolumnlength}
@@ -240,7 +225,7 @@
     }
     \user{\@firstname}{\@lastname}
     % \resumetitle{\@tagline}
-    \vspace{5pt}\\
+    % \vspace{5pt}\\
     \small{\@socialinfo}
     \end{minipage}
     \ifdef{\@photodiameter}{
