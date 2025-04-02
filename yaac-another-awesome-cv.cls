@@ -1,6 +1,6 @@
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
-\LoadClass[letterpaper, 10pt]{article}
+\LoadClass[letterpaper, 10pt]{ctexart}
 
 \newif\if@showLinks   \@showLinksfalse
 
@@ -33,7 +33,6 @@
 
 % Fix error
 \usepackage{amsmath}
-\usepackage{ctex}
 
 % Dependences
 \RequirePackage[english]{babel}
@@ -44,7 +43,7 @@
 \RequirePackage{fullpage}
 
 % page margin
-\RequirePackage[left=5mm,top=2.5mm,right=5mm,bottom=2.5mm]{geometry}
+\RequirePackage[left=5mm,top=5mm,right=5mm,bottom=5mm]{geometry}
 
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
@@ -151,7 +150,7 @@
 % Create a tag
 % Usage: \cvtag{<tag label>}
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base, fill=red!20, rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.5ex,text depth=0.5ex]{#1};
+  \tikz[baseline]\node[scale=1.2, anchor=base, fill=red!20, rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.5ex,text depth=0.5ex]{#1};
 }    
 
 % Render author's name
@@ -213,7 +212,7 @@
     }
     \user{\@firstname}{\@lastname}
     % \resumetitle{\@tagline}
-    % \vspace{5pt}\\
+    \vspace{5pt}\\
     \small{\@socialinfo}
     \end{minipage}
     \ifdef{\@photodiameter}{
