@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
       - name: setup-pages
         uses: actions/configure-pages@v5
-      - name: run-lualatex-ignore-error
+      - name: run-lualatex-render
         run: |
           docker run -i --rm \
             --name texlive-container \
