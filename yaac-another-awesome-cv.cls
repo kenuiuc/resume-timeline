@@ -285,7 +285,7 @@
 % {location} {degree name}
 %            {school name}
 \newcommand\degree[3]{
-    \text{\large#1} & \textbf{\large{#2}} \\*
+    \textbf{\large#1} & \textbf{\large{#2}} \\*
                     & \text{\large #3} \\*
 }
 
