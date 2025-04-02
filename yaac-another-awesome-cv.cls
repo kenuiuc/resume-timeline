@@ -110,7 +110,7 @@
 
 % Setup CV sections
 \titleformat{\section}{\Large\bfseries\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{0.5pt}{0.5pt}
+\titlespacing{\section}{0pt}{0pt}{0pt}
 
 % Configure list
 \setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
@@ -158,7 +158,7 @@
 % Usage: \user{<firstanme>}{<lastname>}
 \newcommand\user[2]{
     \color{accentcolor}
-    {\textbf{\huge {#1 #2}} \color{Black}}
+    {\textbf{\huge {#1}} \color{Black}}
 }
 
 % Render a text with its symbol
@@ -178,18 +178,6 @@
 \newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
 \newcommand*{\website}[2]{\sociallink{\faExternalLink}{#1}{#2}}
 \newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
-
-% Render author's tagline
-\newcommand\resumetitle[1]{
-  \ifundef{\@alternative}{
-	 \par{
-	 	 \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
-	 }
-	 \bigskip
-  }{
-    \color{accentcolor}\textbf{\large{#1}}\color{black}
-  }
-}
 
 \newcommand\idphoto{
   \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
