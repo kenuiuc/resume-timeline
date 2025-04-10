@@ -2,7 +2,7 @@ name: deploy-github-page
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "english" ]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          ref: 'english'
       - name: setup-pages
         uses: actions/configure-pages@v5
       - name: run-lualatex-render
