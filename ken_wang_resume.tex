@@ -1,4 +1,4 @@
-\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+\documentclass[localFont,alternative]{resume_template}
 \name{Ken}{Wang}
 \socialinfo{
 \linkedin{kenuiuc}\github{kenuiuc}\smartphone{778-999-5114}\email{kenuiuc@gmail.com}\address{Vancouver, BC}
@@ -6,8 +6,105 @@
 \photo{2.5cm}{ken_linkedin_avatar.jpeg}
 \begin{document}
 	\makecvheader
-	\input{section_headline}
+	   
+	% Summary
+    \begin{itemize}
+        \item Java Developer with 3 years experience, proficient in microservices with Spring Boot and Spring Cloud
+        \item Have basic machine learning and data analysis skills with Python, R and AWS SageMaker
+        \item Top helper in software developer forum Together Java, with average 10 answers per day
+    \end{itemize}
+
     \vspace{5pt}
-	\input{section_experience}
-	\input{section_education}
+
+	% Experience
+    \sectionTitle{Experience}{\faSuitcase}
+    \begin{experiences}
+    
+    \experience
+    {2022 - 2024}{Vancouver, Canada}
+    {Professional Development}{University of British Columbia}
+    {
+        \begin{itemize}
+        \item Went to graduate school -- Master of Data Science
+        \item Software development and operations training
+        \end{itemize}
+    }
+    {Machine Learning, Deep Learning, Large Language Model, Data Analysis, Data Visualization, Python, R, pandas, scikit-learn, PyTorch, AWS SageMaker}
+    
+    \emptySeparator
+    
+    \experience
+    {2021 - 2021}{Beijing, China}
+    {Java Software Engineer}{EaseMob}
+    {
+        \begin{itemize}
+        \item Worked on a microservice-based SaaS Instant Messaging system built with Spring Cloud
+        \item Implemented a keyword detection service using Thrift RPC to block harmful messages
+        \item Built a reactive Java SDK calling REST services with the Reactor Netty client
+        \item Developed an envelope encryption library using AWS KMS to comply with GDPR
+        \end{itemize}
+    }
+    {Spring Boot, Spring Cloud, MySQL, Redis, Tomcat, Netty, Reactor, GitHub Actions}
+    
+    \emptySeparator
+    
+    \experience
+    {2020 - 2021}{Beijing, China}
+    {Java Software Engineer}{Datablau}
+    {
+        \begin{itemize}
+        \item Worked on data governance tools to analyze metadata from various databases
+        \item Implemented data quality features, which scans DBs and validates data with user-defined rules
+        \item Built REST APIs with Spring MVC to synchronize DB metadata with third-party systems
+        \item Achieved 80\%+ unit test coverage for existing modules using JUnit and Mockito
+        \end{itemize}
+    }
+    {Spring MVC, JDBC, PostgreSQL, Oracle, MySQL, Hibernate, JUnit, Mockito, Maven}
+    
+    \emptySeparator
+    
+    \experience
+    {2019 - 2020}{Beijing, China}
+    {Full-Stack Software Engineer}{ShopHitly}
+    {
+        \begin{itemize}
+        \item Worked on an early-stage E-commerce website, which sells smoking hardware in Illinois US
+        \item Built REST web services for the inventory systems using Node.js, Express.js and MongoDB
+        \item Set up CI/CD pipelines from zero to one with Docker, AWS ECS and CodePipeline
+        \item Implemented a web UI using TypeScript, React and Redux
+        \end{itemize}
+    }
+    {Node.js, Express.js, MongoDB, TypeScript, React, HTML, CSS, Docker, AWS ECS, REST}
+    
+    \emptySeparator
+    
+    \experience
+    {2018 - 2019}{Champaign IL, US}
+    {Hadoop Data Engineer}{Yahoo/Verizon (US largest telecom company)}
+    {
+        \begin{itemize}
+        \item Worked on a low latency OLAP system for user engagement analysis
+        \item Built ETL pipelines with Big Data technologies like Hadoop, Pig, Oozie and Hive
+        \item Ingested data into Apache Druid to allow our analysts to query petabytes of data in seconds
+        \item Development in Java-based RESTful web service for time series analytics with Druid's data
+        \end{itemize}
+    }
+    {Hadoop, Java, Apache Druid, Apache Pig, Oozie, Hive, SLF4J, H2, Gradle, Linux}
+    
+    \end{experiences}
+
+	% Education
+    \sectionTitle{Education}{\faMortarBoard}
+    \begin{experiences}
+    \degree
+    {2023}
+    {Master of Data Science}
+    {University of British Columbia}
+    \vspace{6pt}
+    \degree
+    {2017}
+    {Bachelor of Computer Science}
+    {University of Illinois at Urbana-Champaign}
+    \end{experiences}
+	
 \end{document}
