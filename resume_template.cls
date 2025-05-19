@@ -1,6 +1,6 @@
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
-\LoadClass[letterpaper, 11pt]{article}
+\LoadClass[a4paper, 11pt]{article}
 
 \newif\if@showLinks   \@showLinksfalse
 
@@ -287,6 +287,31 @@
 \newcommand\degree[3]{
     \textbf{\large#1} & \textbf{\large{#2}} \\*
                     & \text{\large #3} \\*
+}
+
+% Define the 'internships' environment
+\newlength{\leftIntern}
+\setlength{\leftIntern}{1.0cm}
+\newlength{\rightIntern}
+\setlength{\rightIntern}{8.0cm}
+\newcolumntype{X}[1]{>{\hfill}m{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p{\rightIntern}}
+\newenvironment{internships}{
+  \begin{longtable}{X{\leftIntern}|Y}
+}{
+  \end{longtable}
+}
+
+% \education
+% {time}{degree}
+% {school}
+%
+% \internship
+% {time}{title}
+% {company}
+\newcommand\internship[3]{
+    \textbf{\large #1} & \textbf{\large{#2}} \\*
+                       & \text{\large #3} \\*
 }
 
 \newcommand*\twocolumnsection[2]{

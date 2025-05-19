@@ -1,7 +1,8 @@
 \documentclass[localFont,alternative]{resume_template}
 \name{Ken}{Wang}
 \socialinfo{
-\linkedin{kenuiuc}\github{kenuiuc}\smartphone{778-999-5114}\email{kenuiuc@gmail.com}\address{Vancouver, BC}
+\smartphone{+86-132-2996-1158}\smartphone{+852-6662-1158}\email{kenuiuc@gmail.com} \\
+\linkedin{kenuiuc}\github{kenuiuc}
 }
 \photo{2.5cm}{ken_linkedin_avatar.jpeg}
 \begin{document}
@@ -9,6 +10,7 @@
 	   
 	% Summary
     \begin{itemize}
+        \item Graduated from the top 5 CS undergrad program in US and got master degree in the top 2 school in Canada
         \item Java Developer with 3 years experience, proficient in microservices with Spring Boot and Spring Cloud
         \item Have basic machine learning and data analysis skills with Python, R and AWS SageMaker
         \item Top helper in software developer forum Together Java, with average 10 answers per day
@@ -21,15 +23,16 @@
     \begin{experiences}
     
     \experience
-    {2022 - 2024}{Vancouver, Canada}
+    {2022 - 2024}{Canada}
     {Professional Development}{University of British Columbia}
     {
         \begin{itemize}
-        \item Went to graduate school -- Master of Data Science
-        \item Software development and operations training
+        \item Master of Data Science: studied statistics and machine learning
+        \item Internship: Use CNN image model to detect post-processing/filetring in TikTok vidoes
+        \item Teaching assistant: software development training
         \end{itemize}
     }
-    {Machine Learning, Deep Learning, Large Language Model, Data Analysis, Data Visualization, Python, R, pandas, scikit-learn, PyTorch, AWS SageMaker}
+    {Machine Learning, Deep Learning, Large Language Model, Python, scikit-learn, PyTorch, AWS SageMaker}
     
     \emptySeparator
     
@@ -53,7 +56,7 @@
     {Java Software Engineer}{Datablau}
     {
         \begin{itemize}
-        \item Worked on data governance tools to analyze metadata from various databases
+        \item Worked on ERwin like data governance tools to analyze metadata from various databases
         \item Implemented data quality features, which scans DBs and validates data with user-defined rules
         \item Built REST APIs with Spring MVC to synchronize DB metadata with third-party systems
         \item Achieved 80\%+ unit test coverage for existing modules using JUnit and Mockito
@@ -92,19 +95,29 @@
     {Hadoop, Java, Apache Druid, Apache Pig, Oozie, Hive, SLF4J, H2, Gradle, Linux}
     
     \end{experiences}
-
-	% Education
-    \sectionTitle{Education}{\faMortarBoard}
-    \begin{experiences}
-    \degree
-    {2023}
-    {Master of Data Science}
-    {University of British Columbia}
-    \vspace{6pt}
-    \degree
-    {2017}
-    {Bachelor of Computer Science}
-    {University of Illinois at Urbana-Champaign}
-    \end{experiences}
 	
+    %Section: Education and Internships
+    \twocolumnsection
+    {\sectionTitle{Education}{\faMortarBoard}
+        \begin{internships}
+            \internship
+            {2023}{Master of Data Science}
+            {University of British Columbia (38th world ranking)}
+            \vspace{5pt}
+            \internship
+            {2017}{Bachelor of Computer Science}
+            {University of Illinois at Urbana-Champaign (5th US ranking in CS)}
+        \end{internships}
+    }
+    {\sectionTitle{Internships}{\faMortarBoard}
+        \begin{internships}
+            \internship
+            {2017}{Java Developer}
+            {Google/CDAP Data Platform}
+            \vspace{5pt}
+            \internship
+            {2016}{Java Developer}
+            {CME Group (world's largest futures exchange)}
+        \end{internships}
+    }
 \end{document}
